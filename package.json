@@ -26,7 +26,16 @@
     "validate.io",
     "validate",
     "validation",
-    "validator"
+    "validator",
+    "valid",
+    "primitive",
+    "string",
+    "number",
+    "null",
+    "undefined",
+    "boolean",
+    "is",
+    "isprimitive"
   ],
   "bugs": {
     "url": "https://github.com/validate-io/primitive/issues"

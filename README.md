@@ -1,4 +1,4 @@
-primitive
+Primitive
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
@@ -17,18 +17,61 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 ## Usage
 
 ``` javascript
-var foo = require( 'validate.io-primitive' );
+var isPrimitive = require( 'validate.io-primitive' );
 ```
 
-#### foo( value )
+#### isPrimitive( value )
 
-What does this function do?
+Validates if a `value` is a JavaScript primitive.
+
+``` javascript
+var value = true;
+
+var bool = isPrimitive( value );
+// returns true
+```
 
 
 ## Examples
 
 ``` javascript
-var foo = require( 'validate.io-primitive' );
+var isPrimitive = require( 'validate.io-primitive' );
+
+console.log( isPrimitive( false ) );
+// returns true
+
+console.log( isPrimitive( 0 ) );
+// returns true
+
+console.log( isPrimitive( '' ) );
+// returns true
+
+console.log( isPrimitive( null ) );
+// returns true
+
+console.log( isPrimitive( undefined ) );
+// returns true
+
+console.log( isPrimitive( [] ) );
+// returns false
+
+console.log( isPrimitive( {} ) );
+// returns false
+
+console.log( isPrimitive( function(){} ) );
+// returns false
+
+console.log( isPrimitive( new Boolean() ) );
+// returns false
+
+console.log( isPrimitive( new String() ) );
+// returns false
+
+console.log( isPrimitive( new Array() ) );
+// returns false
+
+console.log( isPrimitive( new Object() ) );
+// returns false
 ```
 
 To run the example code from the top-level application directory,
