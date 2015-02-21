@@ -44,6 +44,7 @@ describe( 'validate.io-primitive', function tests() {
 			new String(),
 			new Array(),
 			new Object(),
+			new Number(),
 			function(){},
 			[],
 			{}
